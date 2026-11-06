@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cream-50: #fdfbf7;
+  --color-cream-100: #f7f3ed;
+  --color-cream-200: #efe7dc;
+  --color-cream-300: #e3d7c5;
+  --color-cream-400: #d5c3ac;
+
+  --color-beige-100: #f5f0eb;
+  --color-beige-200: #e8dfd8;
+  --color-beige-300: #d8c8b8;
+  --color-beige-400: #c7b29f;
+  --color-beige-500: #b59b85;
+
+  --color-charcoal-100: #6b5e55;
+  --color-charcoal-200: #4a403a;
+  --color-charcoal-300: #2c2523;
+  --color-charcoal-400: #1f1a18;
+
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Plus Jakarta Sans", sans-serif;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--color-cream-50);
+    color: var(--color-charcoal-300);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection {
+    background-color: var(--color-beige-300);
+    color: var(--color-charcoal-300);
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--color-beige-100);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-beige-300);
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-beige-400);
+  }
+}
+
+@utility glass-card {
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(232, 223, 216, 0.7);
+}
