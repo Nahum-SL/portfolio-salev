@@ -48,9 +48,6 @@ export default function Projects() {
                       loading="lazy"
                       className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                     />
-                    <div className="absolute top-3 right-3 rounded-full border border-beige-200 bg-cream-50/90 px-3 py-1 text-[11px] font-semibold text-charcoal-300">
-                      {p.category}
-                    </div>
                   </div>
                   <div className="space-y-3 p-6">
                     <h3 className="font-serif text-xl text-charcoal-300 transition-colors group-hover:text-beige-500">

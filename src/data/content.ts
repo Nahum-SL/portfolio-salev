@@ -108,11 +108,11 @@ export const projects: Project[] = [
     id: "gestion-restaurante",
     category: "Gestión Operativa y RR.HH.",
     eyebrow: "Optimización de Procesos & Planilla",
-    title: "Gestión Integral de Personal y Nómina en Sector Gastronómico",
+    title: "Gestión operativa e integral de RRHH en sector Gastronómico",
     summary:
       "Automatización de cálculos de planillas, control de seguros, bonos y descansos mediante sistemas de Excel y Macros aplicados a la operación de un restaurante.",
     image:
-      "https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&q=80&w=800", // Puedes cambiar la imagen por una afín
+      "/imagen-gerardito.webp", // Puedes cambiar la imagen por una afín
     role: "Administrador de Operaciones y Control de Personal",
     description:
       "Implementación de un sistema de control administrativo enfocado en el recurso humano de un restaurante. Se abarcó el monitoreo de seguros de salud, programación y rotación eficiente de descansos, cálculo y asignación de bonos por desempeño, y la ejecución segura de la nómina y pagos del personal utilizando herramientas avanzadas de hoja de cálculo.",
