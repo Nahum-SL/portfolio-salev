@@ -24,13 +24,6 @@ export default function Hero() {
           animate="show"
           className="space-y-6 text-left md:col-span-7"
         >
-          <motion.div
-            variants={item}
-            className="inline-flex items-center gap-2 rounded-full border border-beige-200 bg-beige-100 px-3.5 py-1.5 text-xs font-medium tracking-wide text-charcoal-200"
-          >
-            <span className="h-2 w-2 animate-pulse rounded-full bg-emerald-500" />
-            <span>{profile.availability}</span>
-          </motion.div>
 
           <motion.h1
             variants={item}
@@ -44,7 +37,7 @@ export default function Hero() {
             variants={item}
             className="max-w-xl text-base leading-relaxed font-light text-charcoal-100 sm:text-lg"
           >
-            Estudiante de 8º ciclo de {profile.career} apasionada por el análisis de datos, la
+            Estudiante de 5 semestre de {profile.career} apasionada por el análisis de datos, la
             eficiencia operativa y el diseño de modelos de negocio sostenibles.
           </motion.p>
 
@@ -58,6 +51,7 @@ export default function Hero() {
             </a>
             <a
               href={profile.cvUrl}
+              download={profile.cvFileName}
               className="inline-flex items-center gap-2.5 rounded-full border border-beige-300 bg-beige-100 px-7 py-3.5 text-sm font-medium text-charcoal-300 transition-all duration-300 hover:bg-beige-200"
             >
               <Download className="h-4 w-4 text-beige-500" />

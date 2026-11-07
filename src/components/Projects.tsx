@@ -1,14 +1,14 @@
-import { useCallback, useState } from 'react'
-import { AnimatePresence } from 'motion/react'
-import { ArrowRight } from 'lucide-react'
-import Reveal from './Reveal'
-import ProjectModal from './ProjectModal'
-import { projects } from '../data/content'
-import type { Project } from '../types'
+import { useCallback, useState } from "react";
+import { AnimatePresence } from "motion/react";
+import { ArrowRight } from "lucide-react";
+import Reveal from "./Reveal";
+import ProjectModal from "./ProjectModal";
+import { projects } from "../data/content";
+import type { Project } from "../types";
 
 export default function Projects() {
-  const [active, setActive] = useState<Project | null>(null)
-  const close = useCallback(() => setActive(null), [])
+  const [active, setActive] = useState<Project | null>(null);
+  const close = useCallback(() => setActive(null), []);
 
   return (
     <section
@@ -24,14 +24,18 @@ export default function Projects() {
             Proyectos Destacados
           </h2>
           <p className="text-sm text-charcoal-100">
-            Haz clic en cualquier proyecto para explorar los detalles del caso, metodologías y
-            resultados.
+            Haz clic en cualquier proyecto para explorar los detalles del caso,
+            metodologías y resultados.
           </p>
         </Reveal>
 
-        <div className="grid gap-8 md:grid-cols-3">
+        <div className="flex flex-wrap justify-center gap-8">
           {projects.map((p, i) => (
-            <Reveal key={p.id} delay={i * 0.1} className="h-full">
+            <Reveal
+              key={p.id}
+              delay={i * 0.1}
+              className="w-full sm:max-w-[calc(50%-1rem)] lg:max-w-[calc(33.333%-1.34rem)]"
+            >
               <button
                 onClick={() => setActive(p)}
                 className="group flex h-full w-full cursor-pointer flex-col justify-between overflow-hidden rounded-2xl border border-beige-200 bg-cream-50 text-left shadow-sm transition-all duration-300 hover:shadow-xl"
@@ -58,7 +62,9 @@ export default function Projects() {
                   </div>
                 </div>
                 <div className="mx-6 mt-4 flex items-center justify-between border-t border-beige-100 pt-2 pb-6">
-                  <span className="text-xs font-medium text-beige-500">Ver Detalle del Caso</span>
+                  <span className="text-xs font-medium text-beige-500">
+                    Ver Detalle del Caso
+                  </span>
                   <ArrowRight className="h-4 w-4 text-charcoal-300 transition-transform group-hover:translate-x-1" />
                 </div>
               </button>
@@ -68,8 +74,10 @@ export default function Projects() {
       </div>
 
       <AnimatePresence>
-        {active && <ProjectModal key={active.id} project={active} onClose={close} />}
+        {active && (
+          <ProjectModal key={active.id} project={active} onClose={close} />
+        )}
       </AnimatePresence>
     </section>
-  )
+  );
 }

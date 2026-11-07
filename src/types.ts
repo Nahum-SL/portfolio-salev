@@ -9,6 +9,7 @@ export interface Profile {
   heroImage: string
   badge: { title: string; subtitle: string }
   cvUrl: string
+  cvFileName: string
   year: number
 }
 
@@ -50,11 +51,30 @@ export interface Project {
 }
 
 export interface Certification {
-  icon: LucideIcon
-  issuer: string
+  id: string
   title: string
-  text: string
+  /** Quién lo emite, ej. "Microsoft", "DataCamp" */
+  issuer: string
+  /** Fecha o estado, ej. "Sep 2024" o "Vigente" */
   date: string
+  /** Descripción corta (opcional) */
+  text?: string
+  /** Imagen del certificado, ej. "/certificates/excel.webp" (poner en /public) */
+  image?: string
+  /** Enlace para verificarlo (opcional) */
+  url?: string
+  /** Se muestra mientras no haya imagen */
+  icon: LucideIcon
+}
+
+export interface CertificationLabels {
+  verify: string
+  zoom: string
+}
+
+export interface Shot {
+  src: string
+  alt: string
 }
 
 export interface ContactData {
