@@ -1,15 +1,15 @@
-import { motion, type Variants } from 'motion/react'
-import { ArrowUpRight, Award, Download } from 'lucide-react'
-import { highlights, profile } from '../data/content'
+import { motion, type Variants } from "motion/react";
+import { ArrowUpRight, Award, Download } from "lucide-react";
+import { highlights, profile } from "../data/content";
 
 const container: Variants = {
   hidden: {},
   show: { transition: { staggerChildren: 0.12 } },
-}
+};
 const item: Variants = {
   hidden: { opacity: 0, y: 24 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut' } },
-}
+  show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+};
 
 export default function Hero() {
   return (
@@ -24,24 +24,28 @@ export default function Hero() {
           animate="show"
           className="space-y-6 text-left md:col-span-7"
         >
-
           <motion.h1
             variants={item}
             className="font-serif text-4xl leading-[1.15] font-normal text-charcoal-300 sm:text-5xl lg:text-6xl"
           >
-            Estrategia, Optimización &amp;{' '}
-            <span className="font-serif text-beige-500 italic">Liderazgo</span> Empresarial.
+            Estrategia, Optimización &amp;{" "}
+            <span className="font-serif text-beige-500 italic">Liderazgo</span>{" "}
+            Empresarial.
           </motion.h1>
 
           <motion.p
             variants={item}
             className="max-w-xl text-base leading-relaxed font-light text-charcoal-100 sm:text-lg"
           >
-            Estudiante de 5 semestre de {profile.career} apasionada por el análisis de datos, la
-            eficiencia operativa y el diseño de modelos de negocio sostenibles.
+            Estudiante de 5 semestre de {profile.career} apasionada por el
+            análisis de datos, la eficiencia operativa y el diseño de modelos de
+            negocio sostenibles.
           </motion.p>
 
-          <motion.div variants={item} className="flex flex-wrap items-center gap-4 pt-4">
+          <motion.div
+            variants={item}
+            className="flex flex-wrap items-center gap-4 pt-4"
+          >
             <a
               href="#proyectos"
               className="inline-flex items-center gap-2.5 rounded-full bg-charcoal-300 px-7 py-3.5 text-sm font-medium text-cream-50 shadow-md transition-all duration-300 hover:bg-charcoal-200 hover:shadow-lg"
@@ -65,7 +69,9 @@ export default function Hero() {
           >
             {highlights.map((h) => (
               <div key={h.label}>
-                <p className="font-serif text-2xl font-semibold text-charcoal-300">{h.value}</p>
+                <p className="font-serif text-2xl font-semibold text-charcoal-300">
+                  {h.value}
+                </p>
                 <p className="mt-1 text-xs text-charcoal-100">{h.label}</p>
               </div>
             ))}
@@ -75,7 +81,7 @@ export default function Hero() {
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
+          transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
           className="flex justify-center md:col-span-5"
         >
           <div className="relative w-full max-w-sm">
@@ -84,15 +90,19 @@ export default function Hero() {
               <img
                 src={profile.heroImage}
                 alt={`${profile.name} - Estudiante de ${profile.career}`}
-                className="h-[420px] w-full rounded-2xl object-cover contrast-105 grayscale transition-all duration-700 hover:grayscale-0"
+                className="h-[420px] w-full rounded-2xl object-cover contrast-105 transition-all duration-700 [@media(hover:hover)]:grayscale [@media(hover:hover)]:hover:grayscale-0"
               />
               <div className="glass-card absolute right-6 bottom-6 left-6 flex items-center gap-3 rounded-xl border-white/80 p-4 shadow-lg">
                 <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-beige-200">
                   <Award className="h-5 w-5 text-charcoal-300" />
                 </div>
                 <div>
-                  <p className="text-xs font-semibold text-charcoal-300">{profile.badge.title}</p>
-                  <p className="text-[11px] text-charcoal-100">{profile.badge.subtitle}</p>
+                  <p className="text-xs font-semibold text-charcoal-300">
+                    {profile.badge.title}
+                  </p>
+                  <p className="text-[11px] text-charcoal-100">
+                    {profile.badge.subtitle}
+                  </p>
                 </div>
               </div>
             </div>
@@ -100,5 +110,5 @@ export default function Hero() {
         </motion.div>
       </div>
     </section>
-  )
+  );
 }

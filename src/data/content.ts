@@ -31,7 +31,7 @@ export const profile: Profile = {
   availability: "Disponible para Prácticas Pre-Profesionales",
   career: "Administración de Empresas",
   heroImage:"/marcia-foto.webp",
-  badge: { title: "Quinto Semestre", subtitle: "Senati" },
+  badge: { title: "Quinto Semestre", subtitle: "SENATI" },
   cvUrl: "/cv.pdf", // cambiar por '/cv-marcia.pdf' (poner el PDF en /public)
   cvFileName: "CV-Marcia.pdf",
   year: 2026,
@@ -85,16 +85,13 @@ export const about: AboutData = {
   ],
   education: {
     period: "2024 - Actualidad (5º Semestre)",
-    degree: "Profesional en Administración de Empresas",
-    school: "Universidad del Pacífico / Universidad de Lima • Tercio Superior",
+    degree: "Tecnico en Administración de Empresas",
+    school: "SENATI º Quinto semestre",
   },
   hardSkills: [
-    "Excel Avanzado (Macros)",
+    "Excel Medio",
     "Power BI & Tableau",
     "SAP ERP (Módulos FI/CO Intro)",
-    "Modelamiento Financiero",
-    "SPSS & Estadística Aplicada",
-    "Gestión de Proyectos (PMBOK)",
   ],
   softSkills: [
     "Pensamiento Crítico",
@@ -106,22 +103,23 @@ export const about: AboutData = {
 };
 
 export const projects: Project[] = [
+  // ... tus otros proyectos ...
   {
-    id: "ecopack",
-    category: "Plan de Negocios",
-    eyebrow: "Proyecto de Emprendimiento & Sostenibilidad",
-    title: "EcoPack Solutions: Reestructuración Estratégica",
+    id: "gestion-restaurante",
+    category: "Gestión Operativa y RR.HH.",
+    eyebrow: "Optimización de Procesos & Planilla",
+    title: "Gestión Integral de Personal y Nómina en Sector Gastronómico",
     summary:
-      "Diseño e implementación de un modelo de negocio sostenible enfocado en empaques biodegradables para el sector retail.",
+      "Automatización de cálculos de planillas, control de seguros, bonos y descansos mediante sistemas de Excel y Macros aplicados a la operación de un restaurante.",
     image:
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800",
-    role: "Líder de Estrategia Comercial y Valoración Financiera (Equipo de 4 integrantes).",
+      "https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&q=80&w=800", // Puedes cambiar la imagen por una afín
+    role: "Administrador de Operaciones y Control de Personal",
     description:
-      "Desarrollo de un modelo de negocio orientado a sustituir empaques plásticos de un solo uso en cadenas de supermercados locales por alternativas de polímeros biodegradables.",
+      "Implementación de un sistema de control administrativo enfocado en el recurso humano de un restaurante. Se abarcó el monitoreo de seguros de salud, programación y rotación eficiente de descansos, cálculo y asignación de bonos por desempeño, y la ejecución segura de la nómina y pagos del personal utilizando herramientas avanzadas de hoja de cálculo.",
     results: [
-      "VAN proyectado a 5 años positivo con TIR del 24.5%.",
-      "Premio al Mejor Proyecto de Innovación Sostenible del semestre universitario.",
-      "Estrategia de Go-To-Market validada mediante 150 encuestas a stakeholders clave.",
+      "Reducción del tiempo en el procesamiento de planillas y pagos mediante plantillas optimizadas con Macros.",
+      "Mejora en la satisfacción y clima laboral gracias a una gestión transparente y puntual de beneficios, bonos y descansos.",
+      "Control estricto de la normativa de seguros y asistencias del equipo de trabajo.",
     ],
   },
 ];
